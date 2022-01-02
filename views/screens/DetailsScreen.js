@@ -150,6 +150,7 @@ else{return(<View>
       <TextInput
       onChangeText={onChangeMob}
           value={mob}
+          keyboardType={"number-pad"}
       name='phone'
       placeholder='0321-xxxxxxx'
       />
@@ -167,6 +168,7 @@ else{return(<View>
       <TextInput
       onChangeText={onChangeCnic}
           value={cnic}
+          keyboardType={"number-pad"}
       name='card'
       placeholder='34603-xxxxxx-x'
       />
