@@ -65,7 +65,7 @@ const BottomNavigator = () => {
                 top: -25,
                 elevation: 5,
               }}>
-              <Icon name="search" color='orange' size={28} />
+              <Icon name="search" color='#90caf9' size={28} />
             </View>
           ),
         }}
@@ -84,7 +84,7 @@ const BottomNavigator = () => {
         component={Products}
         options={{
           tabBarIcon: ({color}) => (
-            <Icon name="favorite" color={color} size={28} />
+            <Icon name="add" color={color} size={28} />
           ),
         }}
       />
