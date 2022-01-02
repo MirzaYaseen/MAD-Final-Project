@@ -17,7 +17,7 @@ const App = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="LoginScreen" component={FrontScreenAfterLogin} />
         <Stack.Screen name="Home" component={BottomNavigator} />
-        <Stack.Screen name="OrderdirectlyScreen" component={OrderDirectlyScreen} />
+        <Stack.Screen name="OrderDirectlyScreen" component={OrderDirectlyScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
