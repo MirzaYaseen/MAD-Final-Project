@@ -15,7 +15,7 @@ import { SecondaryButton } from '../components/Button';
 const FIREBASE_API_ENDPOINT =
   'https://madproject-c2f0c-default-rtdb.firebaseio.com/';
   
-const DetailsScreen = ({ navigation, route }) => {
+const OrderDirectlyScreen = ({ navigation, route }) => {
   const [cond,setcond]=React.useState(true);
     const [name, onChangeName] = React.useState(null);
   const [mob, onChangeMob] = React.useState(null);
@@ -119,22 +119,7 @@ else{return(<View>
         <Text style={{marginLeft:10, fontSize:20}}>Proceed</Text>
 </View>
 
-       <View style={{flexDirection:'row'}}>
-          <Image style={{ width: '30%', height:'30%' , marginLeft:10}}
-          source={require('../../assets/services.jpg')}
-         />
-</View>
-<View style={{flexDirection:'row'}}>
-          <Image style={{ width: '30%', height:'30%' , marginLeft:10}}
-          source={require('../../assets/services.jpg')}
-         />
-         
-     </View>
-     <View style={{flexDirection:'row'}}>    
-          <Image style={{ width: '30%', height:'30%' , marginLeft:10}}
-          source={require('../../assets/services.jpg')}
-         />
-           </View>
+  
 
        <View style={{marginLeft:20, padding:20}}>
       
@@ -235,4 +220,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default DetailsScreen;
+export default OrderDirectlyScreen;
