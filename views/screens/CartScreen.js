@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 import products from '../../consts/products';
 import choosenProducts from '../../consts/cartItems';
-import { PrimaryButton } from '../components/Button';
+import { SecondaryButton } from '../components/Button';
 const FIREBASE_API_ENDPOINT = 'https://madproject-c2f0c-default-rtdb.firebaseio.com/'; 
 const postData = (dataxx) => {
   var requestOptions = {
@@ -55,7 +55,7 @@ const CartScreen = ({ navigation }) => {
           <Text style={{ fontWeight: 'bold', fontSize: 18 }}>
             {item.quantity}
           </Text>
-          <View style={style.actionBtn}>
+          <View style={style.countBtn}>
             <Icon
               onPress={() => {
                 const quantity = choosenProducts.find(
@@ -141,7 +141,7 @@ const CartScreen = ({ navigation }) => {
               </Text>
             </View>
             <View style={{ marginHorizontal: 30 }}>
-              <PrimaryButton title="CHECKOUT" onPress={()=>{setcond(false)}} />
+              <SecondaryButton title="CHECKOUT" onPress={()=>{setcond(false)}} />
             </View>
           </View>
         )}
@@ -188,6 +188,7 @@ else{return(<View>
       onChangeText={onChangeMob}
           value={mob}
       name='phone'
+      keyboardType={"number-pad"}
       placeholder='0321-xxxxxxx'
       />
 
@@ -196,6 +197,7 @@ else{return(<View>
       onChangeText={onChangeQuantity}
           value={quantity}
       name='quantity'
+      keyboardType={"number-pad"}
       placeholder='Enter Quantity you want?'
       />
 
@@ -219,6 +221,7 @@ else{return(<View>
       <TextInput
       onChangeText={onChangeCnic}
           value={cnic}
+          keyboardType={"number-pad"}
       name='card'
       placeholder='34603-xxxxxx-x'
       />
@@ -268,20 +271,20 @@ const style = StyleSheet.create({
   },
   cartCard: {
     height: 100,
-    elevation: 15,
     borderRadius: 10,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.secondary,
     marginVertical: 10,
     marginHorizontal: 20,
+    paddingVertical: 20,
     paddingHorizontal: 10,
     flexDirection: 'row',
     alignItems: 'center',
   },
-  actionBtn: {
+  countBtn: {
     width: 80,
     height: 30,
-    backgroundColor: COLORS.primary,
-    borderRadius: 30,
+    backgroundColor: 'red',
+    borderRadius: 5,
     paddingHorizontal: 5,
     flexDirection: 'row',
     justifyContent: 'center',
