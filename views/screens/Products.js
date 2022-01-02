@@ -77,7 +77,7 @@ const HomeScreen = ({ navigation }) => {
       <TouchableHighlight
         underlayColor={COLORS.white}
         activeOpacity={0.9}
-        onPress={() => navigation.navigate('DetailsScreen', product)}>
+        onPress={() => navigation.navigate('OrderDirectlyScreen', product)}>
         <View style={style.card}>
           <View style={{ alignItems: 'center', top: -40 }}>
             <Image
