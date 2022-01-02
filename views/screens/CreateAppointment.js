@@ -157,7 +157,7 @@ const CreateAppointment = ({ navigation }) => {
           onChangeText={onChangeMob}
           value={mob}
           placeholder="Enter Mobile #"
-          keyboardType="numeric"
+          keyboardType={"number-pad"}
           leftIcon={<Icon name="envelope" size={20} color="black" />}
         />
         <Text style={{ fontSize: 15, marginLeft: 10, color:COLORS.primary }}>
@@ -185,8 +185,9 @@ const CreateAppointment = ({ navigation }) => {
           style={{ borderWidth: 2, padding:15, marginTop:10, marginBottom:10,borderRadius:30, }}
           onChangeText={onChangeCnic}
           value={cnic}
+          keyboardType={"number-pad"}
           placeholder="Enter CNIC # "
-          keyboardType="numeric"
+        
           leftIcon={<Icon name="envelope" size={20} color="black" />}
         />
         <Text style={{ fontSize: 15, marginLeft: 10, color:COLORS.primary }}>
@@ -198,6 +199,7 @@ const CreateAppointment = ({ navigation }) => {
           onChangeText={onChangeDate}
           value={date}
           placeholder="27/12/2021"
+          keyboardType={"number-pad"}
           leftIcon={<Icon name="envelope" size={20} color="black" />}
         />
 
@@ -210,6 +212,7 @@ const CreateAppointment = ({ navigation }) => {
           onChangeText={onChangeTime}
           value={time}
           placeholder="11 am"
+          
           leftIcon={<Icon name="envelope" size={20} color="black" />}
         />
         <TouchableOpacity
